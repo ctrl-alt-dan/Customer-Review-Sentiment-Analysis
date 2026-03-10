@@ -6,23 +6,22 @@ Built a supervised NLP pipeline using Python, Pandas, and scikit-learn with Coun
 This project explores whether Amazon Toy & Games review text can reliably predict customer sentiment using a 20,000-review sample drawn from a much larger dataset spanning 1996 to 2023. The goal is to determine whether text-based sentiment analysis can help identify misleading star ratings and uncover hidden customer dissatisfaction that may otherwise lead to trust erosion, churn, and missed product issues.
 
 ## Original Project Requirements
-For this mini-project you will apply predictive modelling on an area of your choice.
-Choose a dataset (at least a few hundred rows) or select a question and
-identify and gather the data you need. Follow the steps presented in the
-course so far:
-
-a) Perform EDA on the data
-b) Select the outcome/response variable
-c) Select features (optionally perform feature engineering)
-d) Select approaches/models (at least a few)
-e) Apply the models and evaluate them
+Choose a dataset for a text classification task – such data might be obtained via web scraping or may already
+exist in clean form. There needs to be a target variable containing the category of text. \
+\
+Carry out the following steps.
+a) Perform tokenisation and remove stop words.
+b) Apply stemming and/or lemmatisation (optional).
+c) Perform EDA on the text (e.g. bar charts, word clouds)
+d) Create features such as word counts, parts of speech, vectorisation (e.g. Word2Vec, TF-IDF).
+e) Select and apply two or more predictive models to predict the category of text.
+f) Evaluate the models and present your findings.
 
 Present from slides in 8-12 minutes.
   
 The Jupyter notebooks should be readable and well-commented.
-
 # TO BE EDITTED
-## Data Set: Doctor’s Handwritten Prescription BD dataset
+## Data Set
 [Amazon Reviews 2023 - Toys & Games dataset](https://huggingface.co/datasets/McAuley-Lab/Amazon-Reviews-2023)
 
 ## Exploratory Data Analysis

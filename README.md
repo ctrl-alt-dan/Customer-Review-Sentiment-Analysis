@@ -20,27 +20,42 @@ f) Evaluate the models and present your findings.
 Present from slides in 8-12 minutes.
   
 The Jupyter notebooks should be readable and well-commented.
-# TO BE EDITTED
 ## Data Set
 [Amazon Reviews 2023 - Toys & Games dataset](https://huggingface.co/datasets/McAuley-Lab/Amazon-Reviews-2023)
 
 ## Exploratory Data Analysis
--  **Data Distribution**: A Data distribution was performed reviewing number of reviews from unique userIDs, Parent ASIN & By Star Rating.
--  **Shape, Info, Describe**: Basic evaulation was performed to understand the number of classes and available data in each column. Also identifying any null, NA or missing values.
--  **Distribution Visualisation & Analysis**: Distribution Analysis was further performed on Helpful votes, Total reviews by year, and share of raitings. Text standard analysis using text stat, world cloud post text processing was also performed.
+- **Shape, Info, Describe**: Inspection of dataset size, column structure, and potential missing values.
+- **Text Length Analysis**: Distribution analysis of review length and word counts.
+- **Sentiment Distribution**: Examination of class balance between positive and negative sentiment.
+- **Word Frequency Analysis**: Identification of commonly occurring terms within the review corpus.
+- **Data Quality Checks**: Detection of duplicates, empty reviews, and anomalies within the text data.
 
 ## Text Preprocessing
-Preprocesing was performed on text using a manual method and spacy. Steps taken.
+Text preprocessing was performed to convert raw customer reviews into structured features suitable for machine learning models.
 
-- Expand contractions
-- Removed html tags with Beautiful soup
-- Removed Emoticons, symbols, pictographs, flags, dingbats via Unicode
-- Normalise case
-- Removed hyphens, spaces, digits, non-ASCII characters
-- Removed text related to star raiting to prevent data leakage.
+Steps included:
+- Lowercasing text
+-	Removal of punctuation and special characters
+- Tokenisation
+- Stop word removal
+- Vectorisation using CountVectorizer
+- Feature generation using TF-IDF
+
+These transformations converted unstructured text into numerical representations suitable for model training.
 
 ## Modelling
-Utilised Count and TF-IDF Unigram vectorisation combined with supervised classification models Logistic Regression, Linear SVC, and Multinomial Naive Bayes to find most optimal model for sentiment analysis using ML.
+Multiple machine learning models were trained and evaluated to classify review sentiment.
+
+Models explored include:
+- Logistic Regression
+- Naive Bayes
+- Support Vector Machine (SVM)
+
+The modelling process included:
+- Training and validation splits
+- Feature representation comparison (Count vs TF-IDF)
+- Performance evaluation using accuracy, precision, recall, and Macro F1
+- Model comparison to identify the most effective classifier
 
 ## Project Documents
 **Jupyter Notebook** - [01-Amazon-Sentiment-analysis-Mini-Project-3.ipynb](./01-Amazon-Sentiment-analysis-Mini-Project-3.ipynb) \
